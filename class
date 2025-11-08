@@ -17,3 +17,22 @@ class Student(Person):
 s1 = Student("Alex", 6)
 s1.introduce()   # comes from Person
 s1.show_grade()  # from Student
+
+
+class Vehicle:
+    def move(self):
+        print("The vehicle moves")
+
+class Car(Vehicle):
+    def move(self):
+        print("The car drives on the road")
+
+class Boat(Vehicle):
+    def move(self):
+        print("The boat sails on water")
+
+v1 = Car()
+v2 = Boat()
+
+v1.move()
+v2.move()
