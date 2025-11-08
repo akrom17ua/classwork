@@ -1,0 +1,19 @@
+class Person:
+    def __init__(self, name):
+        self.name = name
+    
+    def introduce(self):
+        print(f"Hi, I’m {self.name}!")
+
+class Student(Person):
+    def __init__(self, name, grade):
+        super().__init__(name)  # use parent’s constructor
+        self.grade = grade
+
+    def show_grade(self):
+        print(f"{self.name} is in grade {self.grade}")
+
+# Test it
+s1 = Student("Alex", 6)
+s1.introduce()   # comes from Person
+s1.show_grade()  # from Student
